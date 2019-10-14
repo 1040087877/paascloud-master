@@ -3,11 +3,15 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/paascloud/paascloud-config-repo.git
+          uri: https://github.com/1040087877/paascloud-config-repo.git
           username:
           password:
           search-paths: /*
+          ###指定git获取的分支，比如说git里面有dev、test、master分支，在application.yml配置
           default-label: ${spring.profiles.active}
+          ##把配置下载到本地，不用每次都是加载网络，除非，本地没用，会再次从github获取配置，并保存到 本地磁盘
+          ##注意：切换git的时候，删除原有保留的资源，必须把.git文件夹一起删除，否则用的还是原有的git链接，会误导你，到头来发现配置的总是跟你不一样，
+          ##可以通过链接，检查配置是否跟你一致。http://localhost:8080/application-dev.yml
           basedir: /data/config/paascloud-config-repo
     inetutils:
       ignoredInterfaces:

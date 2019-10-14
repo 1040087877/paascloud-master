@@ -4,6 +4,8 @@
   <!-- 此xml在spring-boot-1.5.3.RELEASE.jar里 -->
   <include resource="org/springframework/boot/logging/logback/defaults.xml" />
   <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+  <property name="LOG_PATH" value="/data/logs/paascloud/${springAppName}"/>
+  <property name="LOG_FILE" value="${springAppName}"/>
   <!-- 开启后可以通过jmx动态控制日志级别(springboot Admin的功能) -->
   <!--<jmxConfigurator/>-->
 

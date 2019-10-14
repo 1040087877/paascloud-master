@@ -36,4 +36,7 @@ public class RedisInitRunner implements CommandLineRunner {
 		log.info(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<<");
 	}
 
+	public static void main(String[] args) {
+		log.info(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<<");
+	}
 }

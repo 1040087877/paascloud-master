@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-    ​
+    ​  <!-- 定义日志文件名称,与工程名一致 -->
+    <property name="springAppName" value="paascloud-provider-omc-log" />​
     <springProperty scope="context" name="springAppName" source="spring.application.name"/>
     <!-- Example for logging into the build folder of your project -->
     <property name="LOG_FILE" value="/data/logs/paascloud/${springAppName}/${springAppName}"/>
